@@ -44,6 +44,8 @@ html, body {
 @media (max-width: 768px) {
   html, body {
     font-size: 14px; /* Adjust font size for smaller screens */
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   #settings, p, a, h1 {
@@ -75,5 +77,6 @@ html, body {
 
   main {
     padding: 0 10px; /* Adds some padding on the sides for small screens */
+    width: auto;
   }
 }

@@ -204,11 +204,16 @@ window.addEventListener('DOMContentLoaded', resizeCanvas, false);
 
 function resizeCanvas() {
   const canvas = document.getElementById('video_canvas');
+  // Assuming there might be a total of 20px padding (10px on each side) as an example
+  const padding = 20; // Adjust this value based on actual padding/margin
+  const availableWidth = window.innerWidth - padding;
+
   if (window.innerWidth < 768) {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerWidth * (3 / 4); // Example ratio, adjust as needed
+    canvas.width = availableWidth;
+    canvas.height = availableWidth * (3 / 4); // Maintain aspect ratio
   } else {
-    canvas.width = 640; // Default size
-    canvas.height = 480;
+    // For larger screens, adjust if necessary to prevent overflow
+    canvas.width = Math.min(640, availableWidth); // Use the smaller of 640 or availableWidth
+    canvas.height = canvas.width * (3 / 4); // Adjust height based on the new width
   }
 }
