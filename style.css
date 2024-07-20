@@ -54,27 +54,6 @@ html, body {
     font-size: 16px; /* Increase font size for readability */
   }
 
-  h1 {
-    font-size: 20px; /* Slightly larger font size for headings */
-  }
-
-  /* Ensure images or other media are responsive */
-  img, video {
-    max-width: 100%;
-    height: auto;
-  }
-
-  canvas, .infer-widget, #settings {
-    width: 100% !important; /* Forces elements to fit the screen width */
-    max-width: 100%; /* Ensures no element is wider than the screen */
-    height: auto; /* Keeps the aspect ratio of the canvas but makes it responsive */
-  }
-
-  #video_canvas {
-    width: 100% !important; /* Adjust canvas width to fit small screens */
-    height: auto; /* Adjust canvas height based on the width while maintaining aspect ratio */
-  }
-
   main {
     padding: 0 10px; /* Adds some padding on the sides for small screens */
     width: auto;
