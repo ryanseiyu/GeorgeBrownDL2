@@ -198,3 +198,17 @@ function changeConfidence () {
 document.getElementById("confidence").addEventListener("input", changeConfidence);
 
 webcamInference();
+
+window.addEventListener('resize', resizeCanvas, false);
+window.addEventListener('DOMContentLoaded', resizeCanvas, false);
+
+function resizeCanvas() {
+  const canvas = document.getElementById('video_canvas');
+  if (window.innerWidth < 768) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerWidth * (3 / 4); // Example ratio, adjust as needed
+  } else {
+    canvas.width = 640; // Default size
+    canvas.height = 480;
+  }
+}
